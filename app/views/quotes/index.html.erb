@@ -1,0 +1,9 @@
+<main class="container">
+    <%= turbo_frame_tag 'first_frame' do %>
+    <div class="header">
+        <h1>Quotes</h1>
+        <%= link_to "New quote", new_quote_path, class: "btn btn--primary", data: { turbo_frame: "_top" } %>
+    </div>
+    <%end%>
+    <%= render @quotes %>
+</main>
