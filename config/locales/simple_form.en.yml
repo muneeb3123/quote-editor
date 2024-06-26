@@ -12,3 +12,6 @@ en:
       quote:
         create: Create quote
         update: Update quote
+      line_item_date:
+         create: Create date
+         update: Update date
