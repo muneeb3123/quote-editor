@@ -15,6 +15,7 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 
 gem "simple_form"
+gem "devise"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
