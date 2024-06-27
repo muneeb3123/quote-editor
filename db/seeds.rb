@@ -33,9 +33,9 @@ begin
   puts "Created line items for 'First quote'"
 
   # Creating users
-  User.create!(company_id: kpmg.id, email: 'accountant@kpmg.com', encrypted_password: Devise::Encryptor.digest(User, 'password'))
-  User.create!(company_id: kpmg.id, email: 'manager@kpmg.com', encrypted_password: Devise::Encryptor.digest(User, 'password'))
-  User.create!(company_id: pwc.id, email: 'eavesdropper@pwc.com', encrypted_password: Devise::Encryptor.digest(User, 'password'))
+  User.create!(company_id: kpmg.id, email: 'accountant@kpmg.com', password: 'password', password_confirmation: "password")
+  User.create!(company_id: kpmg.id, email: 'manager@kpmg.com', password: 'password', password_confirmation: "password")
+  User.create!(company_id: pwc.id, email: 'eavesdropper@pwc.com', password: 'password', password_confirmation: "password")
   puts "Created users for KPMG and PwC"
 
 rescue ActiveRecord::RecordInvalid => e
