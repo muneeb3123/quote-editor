@@ -2,7 +2,8 @@ require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first) # Reference to the first fixture quote
+    login_as users(:accountant)
+    @quote = Quote.ordered.first
   end
   test "Creating a new quote" do
     visit quotes_path
